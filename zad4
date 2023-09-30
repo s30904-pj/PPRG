@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+    int a,b,c; 
+
+    cout << "Podaj 3 liczby po spacjach:" ;
+    cin >> a;
+    cin >> b; 
+    cin >> c;
+
+    if ((a>=b)&&(a>=c)) {
+        cout << "Liczba najwieksza to " << a;
+    }
+    else if ((b>=a)&&(b>=c)) {
+        cout << "Liczba najwieksza to " << b;
+    }
+    else if ((c>=a)&&(c>=b)) {
+        cout << "Liczba najwieksza to " << c;
+    }
+    return 0;
+}
