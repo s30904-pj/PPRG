@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main () {
+    int number; 
+
+    cout << "Podaj liczbe calkowita: "; 
+    cin >> number; 
+    if (number%2 == 0) {
+        cout << "wpisales liczbe parzysta\n";
+    }
+    else {
+        cout << "Wpisales liczbe nieparzysta\n"; 
+    }
+    if (number == 0) { 
+        cout << "Wpisales 0" << endl;
+    }
+    return 0;
+}
