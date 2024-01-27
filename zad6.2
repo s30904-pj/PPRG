@@ -1,0 +1,71 @@
+﻿#include <iostream>
+#include <string>
+using namespace std;
+
+struct uczniowie {
+	string imie;
+	int informatyka;
+	int matematyka;
+	int biologia;
+	int jezyk_polski;
+};
+
+
+int main()
+{
+	struct uczniowie lista[6];
+
+	cout << "Wprowadz dane szesciu uczniow." << endl << endl;
+	for (int i = 0; i < 6; i++) {
+		cout << "Nr ucznia" << i + 1 << endl;
+		cout << "Podaj imie: ";
+		cin >> lista[i].imie;
+		cout << "Podaj ocene z informatyki: ";
+		cin >> lista[i].informatyka;
+		cout << "Podaj ocene z matematyki: ";
+		cin >> lista[i].matematyka;
+		cout << "Podaj ocene z biologii: ";
+		cin >> lista[i].biologia;
+		cout << "Podaj ocene z jezyka polskiego: ";
+		cin >> lista[i].jezyk_polski;
+		cout << endl;
+	}
+
+	int il_pytan;
+	cout << "Ile pytan?: ";
+	cin >> il_pytan;
+
+	int n_ucznia, n_przed;
+	for (int i = 0; i < il_pytan; i++) {
+		cout << "Podaj numer ucznia [1..6]: ";
+		cin >> n_ucznia;
+		if (n_ucznia >= 1 && n_ucznia <= 6) {
+			cout << "Podaj numer przedmiotu [1..4]: ";
+			cin >> n_przed;
+			switch (n_przed) {
+			case 1:
+				cout << "Uczen: " << lista[n_ucznia - 1].imie
+					<< ", ocena z informatyki: " << lista[n_ucznia - 1].informatyka << endl;
+				break;
+			case 2:
+				cout << "Uczen: " << lista[n_ucznia - 1].imie
+					<< ", ocena z matematyki: " << lista[n_ucznia - 1].matematyka << endl;
+				break;
+			case 3:
+				cout << "Uczen: " << lista[n_ucznia - 1].imie
+					<< ", ocena z biologii: " << lista[n_ucznia - 1].biologia << endl;
+				break;
+			case 4:
+				cout << "Uczen: " << lista[n_ucznia - 1].imie
+					<< ", ocena z jezyka polskiego: " << lista[n_ucznia - 1].jezyk_polski << endl;
+				break;
+			default:
+				cout << "zly numer" << endl;
+				break;
+			}
+		}
+		else cout << "zly numer" << endl;
+	}
+
+	return 0;
+}
