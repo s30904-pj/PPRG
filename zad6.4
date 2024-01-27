@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int main()
+{
+	int ilosc;
+	string wyrazenie, ciag;
+
+	cout << "Podaj stringa: ";
+	getline(cin, wyrazenie);
+	cout << "ilosc konkatenacji?: ";
+	cin >> ilosc;
+
+	for (int i = 0; i <= ilosc; i++) {
+		ciag += wyrazenie;
+	}
+
+	cout << "Wynik konkatenacji:" << endl << endl;
+	cout << ciag << endl;
+
+	return 0;
+}
