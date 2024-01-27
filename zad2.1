@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int x, y, wynik=0;
+
+int main() {
+
+	cout << "Podaj liczbe: ";
+	cin >> y;
+	cout << "Suma szeregu: ";
+
+	for (int i = 1; i <= y; i++) {
+		x += i;
+		wynik += x;
+		if (i < y) {
+			cout << x << " + ";
+		}
+		else {
+			cout << x;
+		}
+	}
+
+	cout << " = " << wynik << endl;
+
+	return 0;
+}
