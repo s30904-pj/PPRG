@@ -1,0 +1,22 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+	int x;
+
+	cout << "Podaj ilosc elementow: ";
+	cin >> x;
+	cout << "Podaj liczby:" << endl;
+
+	int* tab = new int[x];
+	int max = 0;
+
+	for (int i = 0; i < x; i++) {
+		cin >> tab[i];
+		if (tab[i] > max) max = tab[i];
+	}
+
+	cout << "Najwiekszy element: " << max << endl;
+
+	return 0;
+}
