@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+
+	cout << "Ilosc elementow tablicy: ";
+	cin >> n;
+	int tablica[n];
+	cout << "Podaj elementy tablicy:\n";
+
+
+	for (int i = 0; i < n; ++i){
+        cin >> tablica[i];
+	}
+	int iler = 0, szukana;
+	for (int i = 0; i < n; ++i) {
+		int liczba = tablica[i], licznik = 0;
+		for (int j = 0; j < n; j++) {
+			if (tablica[j] == liczba) licznik++;
+		}
+		if (licznik > iler) {
+			iler = licznik;
+			szukana = liczba;
+		}
+	}
+
+	cout << "Najczesciej wystepujaca liczba: " << szukana << endl;
+	cout << "Ile razy: " << iler << endl;
+
+
+
+
+	return 0;
+}
