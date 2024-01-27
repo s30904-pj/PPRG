@@ -1,0 +1,29 @@
+﻿#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+
+	vector<int> wektor;
+	int n;
+
+	cout << "Ilość elementów tablicy: ";
+	cin >> n;
+
+	int liczba, max = 0, indeks;
+	for (int i = 0; i < n; i++) {
+		cout << "Podaj liczbe: ";
+		cin >> liczba;
+		wektor.push_back(liczba);
+		if (liczba > max) {
+			max = liczba;
+			indeks = i;
+		}
+	}
+
+	cout << "maksymalna wartość wektora: " << max << endl;
+	cout << "Numer indeksu wartosci maksymalnej: " << indeks << endl;
+
+
+	return 0;
+}
