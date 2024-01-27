@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double a,b,c,delta;
+    cout << "Postać kwadratowa ma postać: x*x*a+bx+c" << endl;
+    cout << "Podaj a" << endl;
+    cin >> a;
+    cout << "Podaj b "<< endl;
+    cin >> b;
+     cout << "Podaj c "<< endl;
+     cin >> c;
+     cout << "Postać kwadratowa:"<<a<<"x*x+"<<b<<"x+"<<c<<endl;
+
+        delta=b*b-4*a*c;
+
+        if(delta<0){
+        cout << "pierwiastek 1: " << (-b - sqrt(delta)) / (2 * a) << endl;
+		cout << "pierwiastek 2: " << (-b + sqrt(delta)) / (2 * a) << endl;
+        }
+        else{
+
+        if(delta==0){
+            cout << "Pierwiastek: " << -b / (2 * a);
+        }
+        else{
+            cout << "Brak rozwiazan" << endl;
+        }
+        }
+     return 0;
+
+}
