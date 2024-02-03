@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//funkcja która narysuje plansze
+//funkcja ktÃ³ra narysuje plansze
 void plansza (char t[])
 {
     for(int i = 1; i<=9; i++)
@@ -46,7 +46,7 @@ bool remis(char t[]) //funkcja zwraca true kiedy na planszy nie ma juz wolnego p
     cout <<" REMIS ";
     return true;
 }
-    void ruch(char t[], char &zawodnik) // ta funkcja
+    void ruch(char t[], char &zawodnik) // ta funkcja umozliwia ruch zawodnika po ktorym nastepuje zmiana zawodnika
     {
         int r;
 
